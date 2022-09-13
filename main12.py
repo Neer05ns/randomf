@@ -7,8 +7,7 @@ import pickle
 
 app = Flask(__name__)
 
-random_tune =pickle.load(open("random_tuned1.pkl","rb"))
-columns_list=pickle.load(open("column_list1.pkl","rb"))
+random_tune =pickle.load(open("rf_model1.pkl","rb"))
 
 @app.route("/")
 def home_page():
@@ -34,7 +33,7 @@ def prediction():
                     "NOX":NOX,
                     "AGE":AGE})
 if __name__ == "__main__" :
-    app.run(host='0.0.0.0',port=5012)
+    app.run(host='0.0.0.0',port=5015)
 
 
                     
